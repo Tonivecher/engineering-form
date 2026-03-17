@@ -28,7 +28,7 @@ export function PhilosophySection() {
 
         <SectionReveal className="col-span-12 lg:col-span-7" delay={0.08}>
           <div className="grid gap-4 md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.8fr)]">
-            <div className="overflow-hidden bg-graphite">
+            <div className="media-surface">
               <img
                 src={materialFeatures[0].image}
                 alt={materialFeatures[0].alt}
@@ -36,14 +36,14 @@ export function PhilosophySection() {
               />
             </div>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
-              <div className="overflow-hidden bg-graphite">
+              <div className="media-surface">
                 <img
                   src={materialFeatures[1].image}
                   alt={materialFeatures[1].alt}
                   className="image-monochrome h-full min-h-[12rem] w-full object-cover transition duration-700 ease-editorial hover:scale-[1.03]"
                 />
               </div>
-              <div className="overflow-hidden bg-graphite">
+              <div className="media-surface">
                 <img
                   src={atmosphereImage.src}
                   alt={atmosphereImage.alt}

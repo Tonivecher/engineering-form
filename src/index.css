@@ -1,5 +1,37 @@
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "Roundex";
+  src:
+    url("./assets/fonts/Roundex-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Roundex-Regular.woff") format("woff"),
+    url("./assets/fonts/Roundex-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope/Manrope-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,10 +40,11 @@
 @layer base {
   :root {
     color-scheme: dark;
-    --color-black: #050505;
+    --color-black: #0a0a0a;
     --color-white: #f4f1eb;
-    --color-graphite: #111111;
-    --color-graphite-soft: #1a1a1a;
+    --color-graphite: #1a1a1a;
+    --color-graphite-soft: #222222;
+    --color-chrome: rgba(72, 74, 78, 0.16);
     --color-muted: rgba(244, 241, 235, 0.68);
     --color-subtle: rgba(244, 241, 235, 0.48);
     --color-line: rgba(244, 241, 235, 0.1);
@@ -32,11 +65,9 @@
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    background:
-      radial-gradient(circle at top, rgba(244, 241, 235, 0.08), transparent 28%),
-      linear-gradient(180deg, #0a0a0a 0%, #050505 45%, #070707 100%);
+    background: var(--color-black);
     color: var(--color-white);
-    font-family: "Geist", system-ui, sans-serif;
+    font-family: "Manrope", system-ui, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -55,9 +86,9 @@
   h5,
   h6 {
     margin: 0;
-    font-family: "Satoshi", "Geist", sans-serif;
-    font-weight: 500;
-    letter-spacing: -0.07em;
+    font-family: "Roundex", "Manrope", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.06em;
   }
 
   p {
@@ -141,11 +172,11 @@
   }
 
   .section-kicker {
-    @apply text-[0.68rem] font-medium uppercase tracking-[0.38em] text-white/50;
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.38em] text-white/50;
   }
 
   .section-title {
-    @apply mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,6vw,5.8rem)] leading-[0.92] tracking-display;
+    @apply mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,6vw,5.8rem)] leading-[0.94] tracking-display;
   }
 
   .section-copy {
@@ -153,19 +184,15 @@
   }
 
   .section-link {
-    @apply inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.34em] text-white/70 transition duration-300 ease-editorial hover:text-white;
-  }
-
-  .architectural-grid {
-    background-image:
-      linear-gradient(rgba(244, 241, 235, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(244, 241, 235, 0.06) 1px, transparent 1px);
-    background-size: 100% 8rem, clamp(4rem, 8vw, 8rem) 100%;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 96%);
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/70 transition duration-300 ease-editorial hover:text-white;
   }
 
   .image-monochrome {
-    filter: grayscale(1) saturate(0) contrast(1.08) brightness(0.84);
+    filter: grayscale(1) saturate(0) contrast(1.12) brightness(0.76);
+  }
+
+  .media-surface {
+    @apply overflow-hidden rounded-md bg-black/25;
   }
 
   .field-error {

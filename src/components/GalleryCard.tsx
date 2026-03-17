@@ -31,7 +31,7 @@ const minHeightMap: Record<GalleryItem["span"], string> = {
 export function GalleryCard({ item, index }: GalleryCardProps) {
   return (
     <motion.article
-      className={`group relative isolate overflow-hidden ${spanClassMap[item.span]}`}
+      className={`group relative isolate overflow-hidden rounded-md ${spanClassMap[item.span]}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -43,14 +43,14 @@ export function GalleryCard({ item, index }: GalleryCardProps) {
       data-cursor="interactive"
     >
       <div
-        className={`relative h-full w-full overflow-hidden bg-graphite ${aspectClassMap[item.span]} ${minHeightMap[item.span]}`}
+        className={`media-surface relative h-full w-full ${aspectClassMap[item.span]} ${minHeightMap[item.span]}`}
       >
         <img
           src={item.image}
           alt={item.alt}
           className="image-monochrome h-full w-full object-cover transition duration-700 ease-editorial group-hover:scale-[1.05] group-hover:brightness-[0.92]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0)_15%,rgba(5,5,5,0.18)_42%,rgba(5,5,5,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.12)_0%,rgba(10,10,10,0.24)_38%,rgba(10,10,10,0.92)_100%)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
         <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
           <p className="section-kicker">{item.category}</p>

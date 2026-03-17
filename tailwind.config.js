@@ -10,8 +10,8 @@ export default {
         line: "var(--color-line)",
       },
       fontFamily: {
-        sans: ['"Geist"', "system-ui", "sans-serif"],
-        display: ['"Satoshi"', '"Geist"', "sans-serif"],
+        sans: ['"Manrope"', "system-ui", "sans-serif"],
+        display: ['"Roundex"', '"Manrope"', "sans-serif"],
       },
       letterSpacing: {
         display: "-0.08em",
