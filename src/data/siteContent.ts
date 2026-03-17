@@ -1,3 +1,4 @@
+import { withBase } from "../lib/utils";
 import type {
   GalleryItem,
   HeroMetric,
@@ -7,7 +8,7 @@ import type {
 
 export const studioName = "Инженерия формы";
 
-export const heroImage = "/projects/enhanced_IMG-20210304-WA0004.webp";
+export const heroImage = withBase("/projects/enhanced_IMG-20210304-WA0004.webp");
 
 export const navItems: NavItem[] = [
   { id: "philosophy", label: "Философия" },
@@ -41,7 +42,7 @@ export const materialFeatures: MaterialFeature[] = [
     title: "Шпон и массив с точной рисунчатой раскладкой",
     description:
       "Подбираем текстуру как часть архитектурной композиции: без случайных переходов, с контролем стыков, кромок и глубины отделки.",
-    image: "/images/generated/materials/premium-wood-masterpiece.webp",
+    image: withBase("/images/generated/materials/premium-wood-masterpiece.webp"),
     alt: "Набор древесных образцов и шпон в мастерской премиального мебельного производства",
   },
   {
@@ -49,7 +50,7 @@ export const materialFeatures: MaterialFeature[] = [
     title: "Металл как несущая графика объекта",
     description:
       "Каркасы, детали и декоративные элементы работают не отдельно, а как система жесткости, масштаба и визуального ритма.",
-    image: "/images/generated/materials/architectural-metal-structure.webp",
+    image: withBase("/images/generated/materials/architectural-metal-structure.webp"),
     alt: "Архитектурная металлическая конструкция для мебели и интерьеров",
   },
   {
@@ -57,13 +58,13 @@ export const materialFeatures: MaterialFeature[] = [
     title: "Композиты для крупных серий и сложной геометрии",
     description:
       "Используем, когда проект требует повторяемости, радиусов, инженерной интеграции и стабильного качества в серийном цикле.",
-    image: "/images/generated/materials/modern-composites-sculpt.webp",
+    image: withBase("/images/generated/materials/modern-composites-sculpt.webp"),
     alt: "Современные композитные материалы и скульптурная геометрия",
   },
 ];
 
 export const atmosphereImage = {
-  src: "/gallery/exposition-stand.webp",
+  src: withBase("/gallery/exposition-stand.webp"),
   alt: "Минималистичный архитектурный светильник как атмосферная деталь",
 };
 
@@ -74,7 +75,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Атриумная мебельная система для общественного пространства",
     description:
       "Посадочные группы, столы и интегрированные кашпо собраны в единый спокойный ритм, способный выдерживать интенсивный поток.",
-    image: "/projects/enhanced_IMG-20210304-WA0004.webp",
+    image: withBase("/projects/enhanced_IMG-20210304-WA0004.webp"),
     alt: "Атриумное общественное пространство с мебелью и интегрированными кашпо",
     span: "feature",
   },
@@ -84,7 +85,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Графитовая спальня со скрытой архитектурой света",
     description:
       "Мягкое изголовье, подиум и прикроватные модули сведены к чистой горизонтали без лишних декоративных приемов.",
-    image: "/projects/P_20190127_212042.webp",
+    image: withBase("/projects/P_20190127_212042.webp"),
     alt: "Темный интерьер спальни с интегрированной мебелью и графитовой отделкой",
     span: "portrait",
   },
@@ -94,7 +95,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Серия booth-модулей для премиальной ресторанной посадки",
     description:
       "Комфорт посадки, тактильная отделка и ресурсная конструкция работают на долгую ежедневную эксплуатацию.",
-    image: "/projects/gen1.webp",
+    image: withBase("/projects/gen1.webp"),
     alt: "Ресторанные booth-модули и столы в общественном интерьере",
     span: "landscape",
   },
@@ -104,7 +105,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Торговый остров с интегрированной витринной геометрией",
     description:
       "Чистый стык стекла, корпуса и света формирует объект, который считывается как архитектурный элемент, а не отдельная мебель.",
-    image: "/projects/gen3.webp",
+    image: withBase("/projects/gen3.webp"),
     alt: "Торговый остров с подсветкой и стеклянными витринами",
     span: "square",
   },
@@ -114,7 +115,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Витринная стена и зона выдачи с акцентом на сервисный сценарий",
     description:
       "Фасады, ниши и подсветка подчинены логике пользования, а не декоративному жесту.",
-    image: "/projects/IMG_20171208_010952.webp",
+    image: withBase("/projects/IMG_20171208_010952.webp"),
     alt: "Витринная стена и барная зона с архитектурной подсветкой",
     span: "square",
   },
@@ -124,7 +125,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Гостевой зал как единая мебельная композиция",
     description:
       "Столы, посадка, барная линия и стеновые поверхности сведены в один материальный язык без визуального шума.",
-    image: "/projects/IMG-20210304-WA0006.webp",
+    image: withBase("/projects/IMG-20210304-WA0006.webp"),
     alt: "Ресторанный интерьер с серией столов, барной стойкой и мягкой мебелью",
     span: "landscape",
   },

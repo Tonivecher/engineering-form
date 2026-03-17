@@ -5,6 +5,17 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function withBase(path: string) {
+  const normalizedPath = path.replace(/^\/+/, "");
+  const base = import.meta.env.BASE_URL ?? "/";
+
+  if (base === "/") {
+    return `/${normalizedPath}`;
+  }
+
+  return `${base}${normalizedPath}`;
+}
+
 export function buildMailtoUrl(
   email: string,
   subject: string,
