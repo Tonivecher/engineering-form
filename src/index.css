@@ -1,0 +1,187 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --color-black: #050505;
+    --color-white: #f4f1eb;
+    --color-graphite: #111111;
+    --color-graphite-soft: #1a1a1a;
+    --color-muted: rgba(244, 241, 235, 0.68);
+    --color-subtle: rgba(244, 241, 235, 0.48);
+    --color-line: rgba(244, 241, 235, 0.1);
+    --section-space: clamp(5rem, 8vw, 8.5rem);
+    --container-padding: clamp(1.25rem, 3vw, 2.75rem);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: auto;
+    background: var(--color-black);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top, rgba(244, 241, 235, 0.08), transparent 28%),
+      linear-gradient(180deg, #0a0a0a 0%, #050505 45%, #070707 100%);
+    color: var(--color-white);
+    font-family: "Geist", system-ui, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.02em;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-family: "Satoshi", "Geist", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.07em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea {
+    color: inherit;
+    font: inherit;
+  }
+
+  button {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--color-line);
+    background: transparent;
+    border-radius: 0;
+    padding: 0 0 1rem;
+    color: var(--color-white);
+    outline: none;
+    caret-color: var(--color-white);
+    transition:
+      border-color 200ms ease,
+      color 200ms ease;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(244, 241, 235, 0.38);
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: rgba(244, 241, 235, 0.62);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 9.5rem;
+  }
+
+  ::selection {
+    background: rgba(244, 241, 235, 0.16);
+    color: var(--color-white);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    html,
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    label {
+      cursor: none;
+    }
+  }
+}
+
+@layer components {
+  .page-grid {
+    @apply mx-auto w-full max-w-[1440px] px-5 md:px-8 xl:px-10;
+  }
+
+  .section-rule {
+    @apply border-t border-white/10;
+  }
+
+  .section-kicker {
+    @apply text-[0.68rem] font-medium uppercase tracking-[0.38em] text-white/50;
+  }
+
+  .section-title {
+    @apply mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,6vw,5.8rem)] leading-[0.92] tracking-display;
+  }
+
+  .section-copy {
+    @apply text-base leading-8 text-white/70 md:text-lg md:leading-9;
+  }
+
+  .section-link {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.34em] text-white/70 transition duration-300 ease-editorial hover:text-white;
+  }
+
+  .architectural-grid {
+    background-image:
+      linear-gradient(rgba(244, 241, 235, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(244, 241, 235, 0.06) 1px, transparent 1px);
+    background-size: 100% 8rem, clamp(4rem, 8vw, 8rem) 100%;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 96%);
+  }
+
+  .image-monochrome {
+    filter: grayscale(1) saturate(0) contrast(1.08) brightness(0.84);
+  }
+
+  .field-error {
+    @apply mt-3 text-sm text-white/60;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
